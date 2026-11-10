@@ -45,7 +45,7 @@ fetch(bypassCacheUrl)
                         let riskField        = riskKey && row[riskKey] ? row[riskKey].trim() : "Low";
                         let challengeField   = challengeKey && row[challengeKey] ? row[challengeKey].trim() : "None Reported";
                         let updateField      = updateKey && row[updateKey] ? row[updateKey].trim() : "No recent updates provided.";
-                        let monthField       = monthKey && row[monthKey] ? row[monthKey].trim() : "None selected" ;
+                        let monthField       = monthKey && row[monthKey] ? row[monthKey].trim() : "August 2026" ;
                         // Normalize for charts
                         let formattedHealth = "Stable";
                         if (statusField.toLowerCase().includes("growth")) formattedHealth = "Growth";
