@@ -45,7 +45,7 @@ fetch(bypassCacheUrl)
                         let riskField        = riskKey && row[riskKey] ? row[riskKey].trim() : "Low";
                         let challengeField   = challengeKey && row[challengeKey] ? row[challengeKey].trim() : "None Reported";
                         let updateField      = updateKey && row[updateKey] ? row[updateKey].trim() : "No recent updates provided.";
-                        let monthField       = monthKey && row[monthKey] ? row[monthKey].trim() : "August 2026" ;
+                        let monthField       = monthKey && row[monthKey] ? row[monthKey].trim() : "August 2026";
                         // Normalize for charts
                         let formattedHealth = "Stable";
                         if (statusField.toLowerCase().includes("growth")) formattedHealth = "Growth";
@@ -69,7 +69,7 @@ fetch(bypassCacheUrl)
 
                 } catch (error) {
                     console.error("Data formatting error:", error);
-                    document.getElementById('startupTableBody').innerHTML = `<tr><td colspan="5" style="text-align: center; color: red; font-weight: bold;">Error formatting data. Check console.</td></tr>`;
+                    document.getElementById('startupTableBody').innerHTML = `<tr><td colspan="6" style="text-align: center; color: red; font-weight: bold;">Error formatting data. Check console.</td></tr>`;
                 }
             }
         });
@@ -77,7 +77,7 @@ fetch(bypassCacheUrl)
     .catch(err => {
         // If it STILL fails, it will print the EXACT reason on your screen
         console.error("Fetch error:", err);
-        document.getElementById('startupTableBody').innerHTML = `<tr><td colspan="5" style="text-align: center; color: red; font-weight: bold;">Connection Failed: ${err.message}</td></tr>`;
+        document.getElementById('startupTableBody').innerHTML = `<tr><td colspan="6" style="text-align: center; color: red; font-weight: bold;">Connection Failed: ${err.message}</td></tr>`;
     });
 
 // =========================================================================
