@@ -115,7 +115,7 @@ function buildDashboard(startups) {
                     <td><span class="badge ${riskClass}">${startup.risk}</span></td>
                     <td style="font-weight: 500;">${startup.challenge}</td>
                     <td style="color: #64748b;">${startup.update}</td>
-                    <td style="font-weight: 500;">${startup.Date}</td>
+                    <td style="font-weight: 500;">${startup.month}</td>
                 </tr>`;
             });
         }
