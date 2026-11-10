@@ -38,7 +38,7 @@ fetch(bypassCacheUrl)
                         const riskKey      = keys.find(k => k.toLowerCase().includes("venture risk"));
                         const challengeKey = keys.find(k => k.toLowerCase().includes("roadblock") || k.toLowerCase().includes("challenge"));
                         const updateKey    = keys.find(k => k.toLowerCase().includes("details") || k.toLowerCase().includes("update"));
-                        const monthKey     = keys.find(k => k.toLowerCase().includes("month") || k.toLowerCase().includes("reporting"));
+                        const monthKey     = keys.find(k => k.toLowerCase().includes("month reporting"));
 
                         let startupNameField = nameKey && row[nameKey] ? row[nameKey].trim() : "Unknown Startup"; 
                         let statusField      = statusKey && row[statusKey] ? row[statusKey].trim() : "Stable";
