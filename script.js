@@ -38,14 +38,14 @@ fetch(bypassCacheUrl)
                         const riskKey      = keys.find(k => k.toLowerCase().includes("venture risk"));
                         const challengeKey = keys.find(k => k.toLowerCase().includes("roadblock") || k.toLowerCase().includes("challenge"));
                         const updateKey    = keys.find(k => k.toLowerCase().includes("details") || k.toLowerCase().includes("update"));
-                        const monthKey     = keys.find(k => k.toLowerCase().includes("month") || k.toLowerCase().includes("reporting"))
+                        const monthKey     = keys.find(k => k.toLowerCase().includes("month") || k.toLowerCase().includes("reporting"));
 
                         let startupNameField = nameKey && row[nameKey] ? row[nameKey].trim() : "Unknown Startup"; 
                         let statusField      = statusKey && row[statusKey] ? row[statusKey].trim() : "Stable";
                         let riskField        = riskKey && row[riskKey] ? row[riskKey].trim() : "Low";
                         let challengeField   = challengeKey && row[challengeKey] ? row[challengeKey].trim() : "None Reported";
                         let updateField      = updateKey && row[updateKey] ? row[updateKey].trim() : "No recent updates provided.";
-                        let monthField       = monthKey && row[monthKey] ? row[monthKey].trim() : "None"
+                        let monthField       = monthKey && row[monthKey] ? row[monthKey].trim() : "None selected" ;
                         // Normalize for charts
                         let formattedHealth = "Stable";
                         if (statusField.toLowerCase().includes("growth")) formattedHealth = "Growth";
@@ -60,7 +60,7 @@ fetch(bypassCacheUrl)
                             health: formattedHealth,
                             risk: formattedRisk,
                             challenge: challengeField,
-                            update: updateField
+                            update: updateField,
                             month: monthField
                         };
                     });
